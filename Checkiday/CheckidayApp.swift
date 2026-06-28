@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+/// Main entry point for the Checkiday menu bar app.
+/// Runs as a `MenuBarExtra` — no dock icon, no main window, just a system tray calendar icon.
 @main
 struct CheckidayApp: App {
     init() {

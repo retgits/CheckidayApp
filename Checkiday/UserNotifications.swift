@@ -1,11 +1,14 @@
 //
-//  AlertHelper.swift
-//  menubarapp
+//  UserNotifications.swift
+//  Checkiday
 //
 //  Created by Leon Stigter on 3/7/25.
+//
 
 import UserNotifications
 
+/// Requests notification permission on app launch.
+/// Called once during `CheckidayApp.init()` to prompt the user for alert/sound/badge access.
 func requestNotificationPermission() {
     UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
         if let error = error {
@@ -18,6 +21,8 @@ func requestNotificationPermission() {
     }
 }
 
+/// Displays an immediate macOS notification with the given title and message.
+/// Used to surface API errors or network failures to the user.
 func showMacNotification(title: String, message: String) {
     let content = UNMutableNotificationContent()
     content.title = title
@@ -27,7 +32,7 @@ func showMacNotification(title: String, message: String) {
     let request = UNNotificationRequest(
         identifier: UUID().uuidString,
         content: content,
-        trigger: nil // Shows immediately
+        trigger: nil
     )
 
     UNUserNotificationCenter.current().add(request) { error in

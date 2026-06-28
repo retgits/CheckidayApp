@@ -12,9 +12,9 @@
 // https://medium.com/@mateuszsiatrak/automating-build-number-increments-in-xcode-with-custom-format-a-practical-guide-bcc90a19f716
 //
 
-VERSION = 2.0.1
+VERSION = 3.1.0
 
 // YYYYMMDDC where C is a counter for a given day (for example, 202306216 would be the 6th build on that day)
-BUILD_NUMBER = 202510204
+BUILD_NUMBER = 202606263
 
 COPYRIGHT = © Copyright 2024, lstigter@

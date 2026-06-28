@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE4482262FEE914E005C2E82 /* CheckidayKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE4482252FEE914E005C2E82 /* CheckidayKit */; };
 		CE68AA6B2D0A1695002416C5 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = CE68AA6A2D0A1695002416C5 /* LaunchAtLogin */; };
 		FCE61B872EA6BBCF00CEB75E /* CheckidayKit in Frameworks */ = {isa = PBXBuildFile; productRef = FCE61B862EA6BBCF00CEB75E /* CheckidayKit */; };
 /* End PBXBuildFile section */
@@ -66,17 +67,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE4482262FEE914E005C2E82 /* CheckidayKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE4482242FEE914E005C2E82 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CEA51DAD2CEBE39500A20D1E = {
 			isa = PBXGroup;
 			children = (
 				CEA51DB82CEBE39500A20D1E /* Checkiday */,
 				FCE61BA72EA6BFFF00CEB75E /* CheckidayTests */,
+				CE4482242FEE914E005C2E82 /* Frameworks */,
 				CEA51DB72CEBE39500A20D1E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -135,6 +145,7 @@
 			);
 			name = CheckidayTests;
 			packageProductDependencies = (
+				CE4482252FEE914E005C2E82 /* CheckidayKit */,
 			);
 			productName = CheckidayTests;
 			productReference = FCE61BA62EA6BFFF00CEB75E /* CheckidayTests.xctest */;
@@ -170,7 +181,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				CE68AA692D0A1695002416C5 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
-				FCE61B852EA6BBCF00CEB75E /* XCLocalSwiftPackageReference "../CheckidayKit" */,
+				CE84A4362FDABBAC00A401CF /* XCLocalSwiftPackageReference "../checkiday-kit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CEA51DB72CEBE39500A20D1E /* Products */;
@@ -282,7 +293,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -343,7 +354,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -382,7 +393,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = "$(VERSION)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.retgits.checkiday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -420,7 +431,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = "$(VERSION)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.retgits.checkiday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -501,9 +512,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		FCE61B852EA6BBCF00CEB75E /* XCLocalSwiftPackageReference "../CheckidayKit" */ = {
+		CE84A4362FDABBAC00A401CF /* XCLocalSwiftPackageReference "../checkiday-kit" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../CheckidayKit;
+			relativePath = "../checkiday-kit";
 		};
 /* End XCLocalSwiftPackageReference section */
 
@@ -519,6 +530,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CE4482252FEE914E005C2E82 /* CheckidayKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE84A4362FDABBAC00A401CF /* XCLocalSwiftPackageReference "../checkiday-kit" */;
+			productName = CheckidayKit;
+		};
 		CE68AA6A2D0A1695002416C5 /* LaunchAtLogin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CE68AA692D0A1695002416C5 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */;

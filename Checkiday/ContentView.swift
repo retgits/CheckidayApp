@@ -9,17 +9,22 @@ import SwiftUI
 import LaunchAtLogin
 import CheckidayKit
 
+/// The menu bar dropdown view displaying today's holidays.
+/// Each holiday is a clickable button that opens its URL in the default browser.
 struct ContentView: View {
     @StateObject private var viewModel = CheckidayViewModel()
     
     var body: some View {
-        Text("⭐️ Today's holidays are...")
+        if viewModel.isLoading {
+            Text("⭐️ Loading today's holidays...")
+        }
+        else {
+            Text("⭐️ Today's holidays are...")
+        }
         
         ForEach(viewModel.checkidayData.holidays, id: \.self) { holiday in
             Button(holiday.name) {
-                if let url = URL(string: holiday.url) {
-                    NSWorkspace.shared.open(url)
-                }
+                NSWorkspace.shared.open(holiday.url)
             }
         }
         
@@ -36,6 +41,7 @@ struct ContentView: View {
             }
         }
         .keyboardShortcut("r")
+        .disabled(viewModel.isLoading)
         
         Button("Quit") {
             NSApplication.shared.terminate(nil)
@@ -48,7 +54,9 @@ struct ContentView: View {
     }
 }
 
+#if DEBUG
 #Preview {
     ContentView()
         .environmentObject(CheckidayViewModel(service: CheckidayServiceMock()))
 }
+#endif
