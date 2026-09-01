@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE4482262FEE914E005C2E82 /* CheckidayKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE4482252FEE914E005C2E82 /* CheckidayKit */; };
 		CE68AA6B2D0A1695002416C5 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = CE68AA6A2D0A1695002416C5 /* LaunchAtLogin */; };
-		FCE61B872EA6BBCF00CEB75E /* CheckidayKit in Frameworks */ = {isa = PBXBuildFile; productRef = FCE61B862EA6BBCF00CEB75E /* CheckidayKit */; };
+		FC038C0D3046E61700584214 /* CheckidayKit in Frameworks */ = {isa = PBXBuildFile; productRef = FC038C0C3046E61700584214 /* CheckidayKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +58,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE68AA6B2D0A1695002416C5 /* LaunchAtLogin in Frameworks */,
-				FCE61B872EA6BBCF00CEB75E /* CheckidayKit in Frameworks */,
+				FC038C0D3046E61700584214 /* CheckidayKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE4482262FEE914E005C2E82 /* CheckidayKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +119,7 @@
 			name = Checkiday;
 			packageProductDependencies = (
 				CE68AA6A2D0A1695002416C5 /* LaunchAtLogin */,
-				FCE61B862EA6BBCF00CEB75E /* CheckidayKit */,
+				FC038C0C3046E61700584214 /* CheckidayKit */,
 			);
 			productName = Checkiday;
 			productReference = CEA51DB62CEBE39500A20D1E /* Checkiday.app */;
@@ -145,7 +143,6 @@
 			);
 			name = CheckidayTests;
 			packageProductDependencies = (
-				CE4482252FEE914E005C2E82 /* CheckidayKit */,
 			);
 			productName = CheckidayTests;
 			productReference = FCE61BA62EA6BFFF00CEB75E /* CheckidayTests.xctest */;
@@ -181,7 +178,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				CE68AA692D0A1695002416C5 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
-				CE84A4362FDABBAC00A401CF /* XCLocalSwiftPackageReference "../checkiday-kit" */,
+				FC038C0B3046E61700584214 /* XCLocalSwiftPackageReference "../CheckidayKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CEA51DB72CEBE39500A20D1E /* Products */;
@@ -378,6 +375,7 @@
 				CURRENT_PROJECT_VERSION = "$(BUILD_NUMBER)";
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Checkiday/Preview Content\"";
+				DEVELOPMENT_TEAM = A587Y2FPR6;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
@@ -394,7 +392,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = "$(VERSION)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.retgits.checkiday;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.stigterhq.checkiday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -416,6 +414,7 @@
 				CURRENT_PROJECT_VERSION = "$(BUILD_NUMBER)";
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Checkiday/Preview Content\"";
+				DEVELOPMENT_TEAM = A587Y2FPR6;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
@@ -432,7 +431,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = "$(VERSION)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.retgits.checkiday;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.stigterhq.checkiday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -512,9 +511,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		CE84A4362FDABBAC00A401CF /* XCLocalSwiftPackageReference "../checkiday-kit" */ = {
+		FC038C0B3046E61700584214 /* XCLocalSwiftPackageReference "../CheckidayKit" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = "../checkiday-kit";
+			relativePath = ../CheckidayKit;
 		};
 /* End XCLocalSwiftPackageReference section */
 
@@ -530,17 +529,12 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CE4482252FEE914E005C2E82 /* CheckidayKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CE84A4362FDABBAC00A401CF /* XCLocalSwiftPackageReference "../checkiday-kit" */;
-			productName = CheckidayKit;
-		};
 		CE68AA6A2D0A1695002416C5 /* LaunchAtLogin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CE68AA692D0A1695002416C5 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */;
 			productName = LaunchAtLogin;
 		};
-		FCE61B862EA6BBCF00CEB75E /* CheckidayKit */ = {
+		FC038C0C3046E61700584214 /* CheckidayKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CheckidayKit;
 		};

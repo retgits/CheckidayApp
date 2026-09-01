@@ -1,0 +1,26 @@
+# Xcode
+
+xcuserdata/
+DerivedData/
+build/
+
+# Swift Package Manager
+
+.build/
+.swiftpm/
+
+# Xcode generated files
+
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+
+# Swift / Xcode build artifacts
+
+*.dSYM
+*.dSYM.zip
+*.ipa
+
+# macOS
+
+.DS_Store

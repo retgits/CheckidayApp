@@ -30,11 +30,6 @@ struct ContentView: View {
         
         Divider()
         
-        Text("Last updated: \(viewModel.lastUpdatedTime.formatted(.dateTime))")
-            .opacity(0.4)
-        
-        Divider()
-        
         Button("Refresh") {
             Task {
                 await viewModel.refresh()
@@ -51,6 +46,17 @@ struct ContentView: View {
         Divider()
         
         LaunchAtLogin.Toggle("Launch at login")
+        
+        Divider()
+        
+        Text("Last updated: \(viewModel.lastUpdatedTime.formatted(.dateTime))")
+            .opacity(0.4)
+        
+        let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
+        let build = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String
+        
+        Text("Version \(version ?? "unknown") (\(build ?? "unknown"))")
+            .opacity(0.4)
     }
 }
 
